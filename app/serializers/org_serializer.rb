@@ -1,4 +1,4 @@
 class OrgSerializer < ActiveModel::Serializer
-  attributes :id, :name
+  attributes :id, :name, :bio
   has_many :products, serializer: ProductSerializer
 end

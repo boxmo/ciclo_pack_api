@@ -1,7 +1,7 @@
 # BASEURL
 
 ```
-ciclo-pack.herokuapp.com/orgs
+ciclo-pack.herokuapp.com
 ```
 
 # login
@@ -182,6 +182,30 @@ parametros: {
         "id": 1,
         "name": "User 2"
     }
+}
+
+```
+
+### ORGS
+
+#### cadastrar org
+
+```javascript
+rota: /orgs POST
+---------------
+parametros: {
+  name: string,
+  bio: text
+}
+```
+#### resposta exemplo
+
+```javascript
+{
+    "bio": "Empresa massa pra caramba. lugar de gente alegre",
+    "id": 5,
+    "name": "Fake org",
+    "products": []
 }
 
 ```

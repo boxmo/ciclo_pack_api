@@ -1,6 +1,6 @@
 # login
 
-```json
+```javascript
 rota: /auth/login  POST
 -----------------------
 parametros: {
@@ -10,7 +10,7 @@ parametros: {
 ```
 #### resposta exemplo
 
-```
+```javascript
 {
     "email": "box_mo@hotmail.com",
     "id": 1,
@@ -34,7 +34,7 @@ parametros: {
 
 # Criar usuário
 
-```
+```javascript
 rota: /auth/sign_up   POST
 -----------------------
 parametros: {
@@ -44,7 +44,8 @@ parametros: {
             }
 ```
 #### resposta exemplo
-```
+
+```javascript
 {
     "email": "mztbrum@gmail.com",
     "id": 2,
@@ -58,13 +59,13 @@ parametros: {
 
 ### Buscar por codigo de barras
 
-```
+```javascript
 rota: /products/{barcode} GET
 -----------------------
 parametros: { barcode: na url}
 ```
 #### resposta exemplo
-```
+```javascript
 {
     "avg_rate": 7.17,
     "id": 4,
@@ -98,7 +99,7 @@ obs: avg_rate é a nota média das três notas (reviews, recycle_rate e logistic
 
 ### Cadastrar produto
 
-```
+```javascript
 rota: /products  POST
 -----------------------
 parametros: {
@@ -111,7 +112,7 @@ parametros: {
 ```
 #### resposta exemplo
 
-```
+```javascript
 {
     "avg_rate": 2.33,
     "id": 7,
@@ -129,14 +130,14 @@ parametros: {
 
 ### deletar produto
 
-```
+```javascript
 rota: /products/{barcode} DELETE
 -----------------------
 parametros { barcode: na url }
 ```
 #### resposta exemplo
 
-```
+```javascript
 {
     "message": "product is gone forever and never."
 }
@@ -145,7 +146,7 @@ parametros { barcode: na url }
 ### REVIEWS
 
 #### cadastrar review
-```
+```javascript
 rota: /reviews POST
 ------------------
 parametros: {

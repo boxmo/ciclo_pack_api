@@ -6,6 +6,11 @@ class OrgsController < ApplicationController
     render json: @orgs
   end
 
+  def show
+    @org = Org.find(params[:id])
+    render json: @org
+  end
+
   def create
     @org = Org.new(org_params)
 

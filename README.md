@@ -157,7 +157,7 @@ parametros: {
       }
 ```
 #### reposta exemplo
-```
+```javascript
 {
     "body": "Produto reponsavel, reciclagem na veio",
     "created_at": "2017-02-03T10:34:30.003Z",

@@ -17,7 +17,7 @@ gem 'pg'
 gem 'puma', '~> 3.0'
 
 
-
+gem 'rails_12factor', group: :production # heroku
 gem 'active_model_serializers'
 gem 'rack-cors', :require => 'rack/cors'
 

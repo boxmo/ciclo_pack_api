@@ -16,6 +16,10 @@ class Product < ApplicationRecord
   belongs_to :org
   has_many :reviews
 
+  validates :name, presence: true
+  validates :sku, presence: true
+  validates :recycle_rate, presence: true
+  validates :logistics_rate, presence: true
 
   def avg_rate
     sum = avg_user_rate_sum + recycle_rate + logistics_rate

@@ -15,5 +15,10 @@ class Review < ApplicationRecord
   belongs_to :user
   belongs_to :product
 
+  validates :user, presence: true
+  validates :product, presence: true
+  validates :rate, presence: true
+  validates :body, presence: true
+
   validates :rate, numericality: { less_than_or_equal_to: 10 }
 end

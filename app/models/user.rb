@@ -17,6 +17,8 @@ class User < ActiveRecord::Base
   #         :confirmable, :omniauthable
   # include DeviseTokenAuth::Concerns::User
 
-  validates :email, uniqueness: true
-  validates :password, length: 8..30
+  validates :email, uniqueness: true, presence: true
+  validates :password, length: 8..30, presence: true
+  validates :name, presence: true
+
 end

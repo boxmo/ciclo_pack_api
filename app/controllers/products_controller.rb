@@ -37,7 +37,8 @@ class ProductsController < ApplicationController
                   :sku,
                   :recycle_rate,
                   :logistics_rate,
-                  :org_id
+                  :org_id,
+                  :image
                  )
   end
 

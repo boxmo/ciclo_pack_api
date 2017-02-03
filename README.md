@@ -110,6 +110,7 @@ rota: /products  POST
 -----------------------
 parametros: {
               name: string
+              image: string (url da imagem)
               sku: string (barcode)
               recycle_rate: integer
               logistics_rate: integer
@@ -124,6 +125,7 @@ parametros: {
     "id": 7,
     "logistics_rate": 5,
     "name": "Produto 2",
+    "image": "http://google.com/logo.png",
     "org": {
         "id": 1,
         "name": "Empresa teste"
@@ -174,6 +176,7 @@ parametros: {
         "logistics_rate": 6,
         "name": "Produto 1",
         "recycle_rate": 8,
+        "image": "http://google.com/logo.png",
         "sku": "123465798"
     },
     "rate": 9,

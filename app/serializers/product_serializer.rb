@@ -1,7 +1,8 @@
 class ProductSerializer < ActiveModel::Serializer
   attributes :id, :sku,
              :name, :recycle_rate,
-             :logistics_rate, :avg_rate
+             :logistics_rate, :avg_rate,
+             :image
 
   belongs_to :org, serializer: OrgSerializer
   has_many :reviews, serializer: ReviewSerializer

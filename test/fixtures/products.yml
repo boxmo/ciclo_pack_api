@@ -10,6 +10,7 @@
 #  sku            :string
 #  recycle_rate   :integer
 #  logistics_rate :integer
+#  image          :string
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

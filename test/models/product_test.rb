@@ -10,6 +10,7 @@
 #  sku            :string
 #  recycle_rate   :integer
 #  logistics_rate :integer
+#  image          :string
 #
 
 require 'test_helper'

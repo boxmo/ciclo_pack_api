@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    @product = Product.find(params[:id])
+    @product = Product.find_by(sku: params[:id])
     if @product.destroy
       render json: {  message: "product is gone forever and never."}, status: :ok
     else
@@ -34,11 +34,11 @@ class ProductsController < ApplicationController
 
   def product_params
     params.permit(:name,
-                                   :sku,
-                                   :recycle_rate,
-                                   :logistics_rate,
-                                   :org_id
-                                   )
+                  :sku,
+                  :recycle_rate,
+                  :logistics_rate,
+                  :org_id
+                 )
   end
 
 end

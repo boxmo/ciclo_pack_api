@@ -10,6 +10,7 @@
 #  sku            :string
 #  recycle_rate   :integer
 #  logistics_rate :integer
+#  image          :string
 #
 
 class Product < ApplicationRecord
@@ -23,11 +24,13 @@ class Product < ApplicationRecord
 
   def avg_rate
     sum = avg_user_rate_sum + recycle_rate + logistics_rate
-    return (sum / 3)
+    return 0 if sum.zero?
+    return (sum.to_f / 3).round(2)
   end
 
   def avg_user_rate_sum
     sum = reviews.map(&:rate).sum
-    return (sum / reviews.count)
+    return 0 if sum.zero?
+    return (sum.to_f / reviews.count).round(2)
   end
 end

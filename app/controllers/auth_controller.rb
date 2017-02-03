@@ -1,22 +1,28 @@
 class AuthController < ApplicationController
 
   def login
+    @auth = false
     @user = User.find_by(email: params[:email])
-    if @user
-      if @user.password == params[:password]
-        render json: @user
-      else
-        render json: {message: "Email e senha não conferem"}, status: 401
-      end
+    @auth = true if @user && @user.password == params[:password]
+
+    if @auth
+      render json: @user, status: :ok
     else
-      @user = User.new(user_params)
-      if @user.save
-        render json: @user, status: 201
-      else
-        render json: {  message: @user.errors.messages }, status: 401
-      end
+      render json: {message: "Email e senha não conferem"}, status: 401
     end
   end
+
+
+
+  def signup
+    @user = User.new(user_params)
+    if @user.save
+      render json: @user, status: 201
+    else
+      render json: {  message: @user.errors.messages }, status: 401
+    end
+  end
+
 
 
   private

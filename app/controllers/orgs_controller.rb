@@ -8,6 +8,7 @@ class OrgsController < ApplicationController
 
   def create
     @org = Org.new(org_params)
+
     if @org.save
       render json: @org, status: :ok
     else

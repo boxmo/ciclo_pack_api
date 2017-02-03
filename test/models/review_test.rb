@@ -1,17 +1,19 @@
 # == Schema Information
 #
-# Table name: orgs
+# Table name: reviews
 #
 #  id         :integer          not null, primary key
-#  name       :string
-#  bio        :text
+#  user_id    :integer
+#  product_id :integer
+#  rate       :integer
+#  body       :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 require 'test_helper'
 
-class OrgTest < ActiveSupport::TestCase
+class ReviewTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

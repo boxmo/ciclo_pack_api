@@ -1,10 +1,12 @@
 # == Schema Information
 #
-# Table name: orgs
+# Table name: reviews
 #
 #  id         :integer          not null, primary key
-#  name       :string
-#  bio        :text
+#  user_id    :integer
+#  product_id :integer
+#  rate       :integer
+#  body       :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
@@ -12,9 +14,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  bio: MyText
+  user: one
+  product: one
+  rate: 1
+  body: MyText
 
 two:
-  name: MyString
-  bio: MyText
+  user: two
+  product: two
+  rate: 1
+  body: MyText

@@ -21,6 +21,15 @@ class OrgsController < ApplicationController
     end
   end
 
+  def destroy
+    @org = Org.find(params[:id])
+    if @org.destroy
+      render json: {  message: "org is gone forever and never."}, status: :ok
+    else
+      render json: {  message: "Org could not be destroyed"}, status: 400
+    end
+  end
+
   private
 
   def org_params

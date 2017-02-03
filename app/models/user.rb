@@ -1,0 +1,22 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id       :integer          not null, primary key
+#  name     :string
+#  nickname :string
+#  image    :string
+#  email    :string
+#  password :string
+#
+
+class User < ActiveRecord::Base
+  # Include default devise modules.
+  # devise :database_authenticatable, :registerable,
+  #         :recoverable, :rememberable, :trackable, :validatable,
+  #         :confirmable, :omniauthable
+  # include DeviseTokenAuth::Concerns::User
+
+  validates :email, uniqueness: true
+  validates :password, length: 8..30
+end

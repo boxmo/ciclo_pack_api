@@ -1,6 +1,6 @@
 # login
 
-```
+```json
 rota: /auth/login  POST
 -----------------------
 parametros: {
